@@ -19,6 +19,7 @@ const WebSocketServer = require("ws").Server;
 const wss = new WebSocketServer({ server: server });
 
 wss.on("connection", function connection(ws) {
+  console.log("connected");
   const numClients = wss.clients.size;
 
   console.log("clients connected: ", numClients);
